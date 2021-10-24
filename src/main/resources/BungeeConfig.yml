@@ -1,0 +1,77 @@
+# Enables broadcasting
+enable-broadcast: true
+
+# In what servers do NOT send a message?
+disabled-servers:
+#- testServer
+
+# The file that will contain the messages to broadcast.
+# Supports custom file types, such as .yml or .txt
+message-file: "messages.txt"
+
+# The minimal amount of players that has to be online for a message to broadcast.
+# Set 0 to disable this feature.
+min-players: 1
+
+# Custom variables that will be replaced in the custom message file.
+# This useful when we are creating a lot of lines with the same name.
+# Usage: <nameOfPlaceholder>: "&6Text..."
+custom-variables:
+  <title>: "&c[&aArcane&9Announcer&c] "
+  <prefix>: "&5&m======================"
+  <suffix>: "&asuffix"
+
+# Placeholder formats
+placeholder-format:
+  time:
+    # Time zones: https://www.mkyong.com/java/java-display-list-of-timezone-with-gmt/
+    time-zone: "GMT0"
+
+    # Use system default time zone instead of searching for that?
+    use-system-zone: false
+
+    # Formats/examples: https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html
+    # Used for %server-time% placeholder.
+    time-format:
+      format: "mm:HH"
+    # Used for %date% placeholder.
+    date-format:
+      format: "dd/MM/yyyy"
+
+# Time interval for sending messages.
+time: 3
+
+# Time settings
+# Variables: seconds, days, minutes, hours, milliseconds
+time-setup: minutes
+
+# Want to broadcast the messages in ordered or randomly?
+# Minimum 2 message needed to get a random message!
+random: false
+
+# Does the plugin send the sent auto-messages to console?
+broadcast-to-console: false
+
+# Plugin messages
+messages:
+  index-start: "&cThe index number should be start from 0. You have to give a less number."
+  added-text: "&aSuccessfully added:&r %text%"
+  text-removed: "&cThe message successfully removed with index:&7 %index%"
+  bad-number: "&cNumber must be 0 or higher!"
+  reload-config: "&aThe plugin successfully reloaded!"
+  no-permission: "&cYou don't have permission for this!"
+  no-message-to-list: "&cThere is no message in the file."
+  toggle:
+    enabled: "&aThe messages successfully turned on!"
+    disabled: "&cThe messages successfully turned off!"
+    no-players-available: "&cThere is no player available on the server."
+    no-player: "&cThe player not found with this name."
+    console-usage: "&cUsage:&7 /am toggle <player/all>"
+  chat-messages:
+    - "&8&l-----------"
+    - "&7/&aarcaneannouncer reload&7 (or rl)&e -&6 Reloads the plugin and config."
+    - "&7/&aarcaneannouncer toggle [player/all]&e -&6 Toggle auto message sending."
+    - "&7/&aarcaneannouncer list&5 -&6 List messages that is added to file."
+    - "&7/&aarcaneannouncer add <text>&5 -&6 Adds a text message to the file."
+    - "&7/&arcaneannouncer remove <index>&5 -&6 Removes a message by the given index."
+    - "&8&l-----------"

@@ -1,0 +1,56 @@
+name: ArcaneAnnouncer
+version: '${project.version}'
+main: me.itisyedog.arcaneannouncer.bukkit.ArcaneAnnouncer
+api-version: 1.17
+authors: [ ItIsYeDog ]
+softdepend: [PlaceholderAPI, Vault]
+commands:
+  arcaneannouncer:
+    description: The main command for arcaneannouncer.
+    usage: <command>
+    aliases: [am]
+
+permissions:
+  arcaneannouncer.*:
+    description: Gives access to all arcaneannouncer permissions.
+    children:
+      arcaneannouncer.seemsg: true
+      arcaneannouncer.toggle: true
+      arcaneannouncer.add: true
+      arcaneannouncer.remove: true
+      arcaneannouncer.clearall: true
+      arcaneannouncer.list: true
+      arcaneannouncer.restrictedplayers: true
+      arcaneannouncer.reload: true
+      arcaneannouncer.help: true
+      arcaneannouncer.forcesend: true
+  arcaneannouncer.seemsg:
+    description: Allows you to see the messages broadcasted by ArcaneAnnouncer.
+    default: true
+  arcaneannouncer.toggle:
+    description: Allows the player to use the /am toggle command.
+    default: false
+  arcaneannouncer.add:
+    description: Allows the player to use the /am add command.
+    default: false
+  arcaneannouncer.remove:
+    description: Allows the player to use the /am remove command.
+    default: false
+  arcaneannouncer.clearall:
+    description: Allows the player to use the /am clearall command.
+    default: false
+  arcaneannouncer.list:
+    description: Allows the player to use the /am list command.
+    default: false
+  arcaneannouncer.restrictedplayers:
+    description: Allows the player to use the /am restricted command.
+    default: false
+  arcaneannouncer.forcesend:
+    description: Allows the player to use the /am forcesend command.
+    default: false
+  arcaneannouncer.help:
+    description: Help commands for ArcaneAnnouncer.
+    default: false
+  arcaneannouncer.reload:
+    description: Reload the config files.
+    default: false

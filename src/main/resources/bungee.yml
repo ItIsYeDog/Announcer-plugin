@@ -1,0 +1,4 @@
+name: ArcaneAnnouncer
+main: me.itisyedog.arcaneannouncer.bungee.ArcaneAnnouncer
+version: 1.7
+author: ItIsYeDog
